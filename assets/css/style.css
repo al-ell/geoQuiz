@@ -1,0 +1,94 @@
+/* Colors */
+
+body,
+main {
+    background-color: #765674;
+}
+
+#logo,
+header,
+nav,
+footer {
+    background-color: #d0d8dc;
+}
+
+
+/* Special Margins & Paddings */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Nav & Header */
+
+.nav-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    display: inline-flex;
+    padding: 10px;
+    color: #765674;
+}
+
+.nav-links {
+    text-transform: uppercase;
+    font-family: itim, sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 20px;
+    padding-top: 0;
+}
+
+#logo {
+    font-family: Kalam, sans-serif;
+    font-weight: 700;
+    font-size: 12vh;
+    letter-spacing: 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    height: 14vh;
+}
+
+#logo1 {
+    color: #da1b2b;
+}
+
+#logo2 {
+    color: #5d8038;
+}
+
+
+
+
+
+
+/* @Media Queries */
+
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav li {
+        flex: 1 1 0;
+    }
+}
