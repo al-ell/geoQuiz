@@ -1,7 +1,6 @@
 
 const easyQuizArray = [
     {
-        id: "1",
         question: "What is the capital of Russia?",
         a: "Moscow",
         b: "Madrid",
@@ -10,7 +9,6 @@ const easyQuizArray = [
         correct: "a",
     },
     {
-        id: "2",
         question: "Which of these rivers is the longest?",
         a: "Amazon",
         b: "Congo",
@@ -19,7 +17,6 @@ const easyQuizArray = [
         answer: "a"
     },
     {
-        id: "3",
         question: "Athens is the capital of which country?",
         a: "Argentina",
         b: "Egypt",
@@ -28,7 +25,6 @@ const easyQuizArray = [
         answer: "c"
     },
     {
-        id: "4",
         question: "What is the name of the country that borders the United States to the north?",
         a: "Columbia",
         b: "Russia",
@@ -37,7 +33,6 @@ const easyQuizArray = [
         answer: "c"
     },
     {
-        id: "5",
         question: "What three colors do you find on the Italian flag?",
         a: "Red, White, Green",
         b: "Red, White, Yellow",
@@ -46,7 +41,6 @@ const easyQuizArray = [
         answer: "a"
     },
     {
-        id: "6",
         question: "Where is the driest place on earth?",
         a: "Red, White, Green",
         b: "Red, White, Yellow",
@@ -55,7 +49,6 @@ const easyQuizArray = [
         answer: "a"
     },
     {
-        id: "7",
         question: "What is the largest continent",
         a: "North America",
         b: "Asia",
@@ -64,7 +57,6 @@ const easyQuizArray = [
         answer: "b"
     },
     {
-        id: "8",
         question: "The famous 'Leaning Tower of Pisa' is found in what country?",
         a: "Spain",
         b: "Germany ",
@@ -73,7 +65,6 @@ const easyQuizArray = [
         answer: "c"
     },
     {
-        id: "9",
         question: "Which of the Earth's oceans is the smallest in size?",
         a: "Southern",
         b: "Indian",
@@ -88,16 +79,14 @@ const easyQuizArray = [
         b: "Asia",
         c: "Africa",
         d: "South America",
-        answer: "c"
     },
 ];
 
 
-
 // Load all the elements from HTML to DOM:
 const quizContainer = document.getElementById("quiz-container");
-const options = document.getElementsByClassName("answer");
-const question = document.getElementById("question");
+const options = document.getElementsByClassName("options");
+const quizQuestion = document.getElementById("question");
 const aText = document.getElementById('a');
 const bText = document.getElementById('b');
 const cText = document.getElementById('c');
@@ -113,5 +102,8 @@ let score = 0;
 // To generate the quiz
 generateQuiz();
 function generateQuiz() {
+    const currentQuizData = easyQuizArray[currentQuiz];
 
+    quizQuestion.innerText = currentQuizData.question;
+    
 }
