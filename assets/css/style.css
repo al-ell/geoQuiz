@@ -77,6 +77,11 @@ nav a {
 
 /* Game Area */
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
 .start-screen,
 .end-container {
     position: absolute;
@@ -84,7 +89,7 @@ nav a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    display: flex;
 }
 
 .hide {
@@ -102,21 +107,43 @@ nav a {
     background-color: #8eccb1;
     font-family: Itim, sans-serif;
     letter-spacing: 2px;
+    display: none;
+    justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     font-size: 20px;
 }
 
-#game-container {
+#submit-btn {
+    padding-bottom: 5vh;
+    height: 50px;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    color: #765674;
+    background-color: #5d8038;
+    font-family: Itim, sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#quiz-container {
+    margin-top:10vh;
     background-color: #8eccb1;
     padding: 10px;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 /* @Media Queries */
 
