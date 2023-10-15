@@ -12,17 +12,17 @@ const easyQuizArray = [
     {
         id: "2",
         question: "Which of these rivers is the longest?",
-        a: "Amazon", 
-        b: "Congo", 
-        c: "Yangtze", 
+        a: "Amazon",
+        b: "Congo",
+        c: "Yangtze",
         d: "Yellow",
         answer: "a"
     },
     {
         id: "3",
         question: "Athens is the capital of which country?",
-        a: "Argentina", 
-        b: "Egypt", 
+        a: "Argentina",
+        b: "Egypt",
         c: "Greece",
         d: "Kenya",
         answer: "c"
@@ -30,9 +30,9 @@ const easyQuizArray = [
     {
         id: "4",
         question: "What is the name of the country that borders the United States to the north?",
-        a: "Columbia", 
-        b: "Russia", 
-        c: "Canada", 
+        a: "Columbia",
+        b: "Russia",
+        c: "Canada",
         d: "Mexico",
         answer: "c"
     },
@@ -91,3 +91,27 @@ const easyQuizArray = [
         answer: "c"
     },
 ];
+
+
+
+// Load all the elements from HTML to DOM:
+const quizContainer = document.getElementById("quiz-container");
+const options = document.getElementsByClassName("answer");
+const question = document.getElementById("question");
+const aText = document.getElementById('a');
+const bText = document.getElementById('b');
+const cText = document.getElementById('c');
+const dText = document.getElementById('d');
+const submitBtn = document.getElementById('submit-btn');
+
+
+// to start questions and score at 0 each time
+let currentQuiz = 0;
+let score = 0;
+
+
+// To generate the quiz
+generateQuiz();
+function generateQuiz() {
+
+}
