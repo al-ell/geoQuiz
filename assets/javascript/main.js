@@ -89,7 +89,7 @@ const easyQuizArray = [
 
 // Load all the elements from HTML to DOM:
 const quizContainer = document.getElementById("quiz-container");
-const options = document.getElementsByClassName("options");
+const options = document.querySelectorAll(".options");
 const quizQuestion = document.getElementById("question");
 const aText = document.getElementById('a');
 const bText = document.getElementById('b');
@@ -110,6 +110,7 @@ function generateQuiz() {
     // to call the first question in the quiz array 
     const currentQuizData = easyQuizArray[currentQuiz];
     // to insert the first question
+    console.log(currentQuizData);
     quizQuestion.innerText = currentQuizData.question;
     aText.innerText = currentQuizData.a;
     bText.innerText = currentQuizData.b;
@@ -117,3 +118,8 @@ function generateQuiz() {
     dText.innerText = currentQuizData.d;
 
 }
+
+
+// function deselectOptions() {
+//     options.forEach(option => answerEl.checked = false);
+// }
