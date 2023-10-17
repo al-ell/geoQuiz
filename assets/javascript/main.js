@@ -1,4 +1,9 @@
 
+document.addEventListener("DOMContentLoaded", function () {
+    generateQuiz();
+});
+
+
 const easyQuizArray = [
     {
         question: "What is the capital of Russia?",
@@ -73,7 +78,6 @@ const easyQuizArray = [
         answer: "d"
     },
     {
-        id: "10",
         question: "The nation state of Slovenia is located on which continent?",
         a: "Europe",
         b: "Asia",
@@ -100,10 +104,11 @@ let score = 0;
 
 
 // To generate the quiz
-generateQuiz();
+
+
 function generateQuiz() {
     const currentQuizData = easyQuizArray[currentQuiz];
-
+    console.log(currentQuizData);
     quizQuestion.innerText = currentQuizData.question;
-    
+
 }
