@@ -107,8 +107,13 @@ let score = 0;
 
 
 function generateQuiz() {
+    // to call the first question in the quiz array 
     const currentQuizData = easyQuizArray[currentQuiz];
-    console.log(currentQuizData);
+    // to insert the first question
     quizQuestion.innerText = currentQuizData.question;
+    aText.innerText = currentQuizData.a;
+    bText.innerText = currentQuizData.b;
+    cText.innerText = currentQuizData.c;
+    dText.innerText = currentQuizData.d;
 
 }
