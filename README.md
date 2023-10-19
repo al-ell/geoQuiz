@@ -91,7 +91,7 @@ As an administrator for the site I want to:
 
 ### Colour Scheme
 
-![color scheme](/assets/documentation/styling/ColorPallete.png)
+![color scheme](/assets/docs/styling/ColorPallete.png)
 careated using [Coolors](https://coolors.co/) color pallete generator.
 
 I have attempted to make the website gender neutral.
@@ -103,17 +103,16 @@ I have chosen child friendly and easy to read Google Fonts for the logo, heading
 ##### Logo
 
 Kalam:
-![kalam](/assets/documentation/styling/kalam.png)
+![kalam](/assets/docs/styling/kalam.png)
 
-#### Headings
+##### Nav 
 
-Itim:
-![itim](/assets/documentation/styling/itim.png)
+![Itim](/assets/docs/styling/itim.png)
 
-##### Paragraphs
+##### Questions & Options
 
 Delius:
-![delius](/assets/documentation/styling/delius.png)
+![delius](/assets/docs/styling/delius.png)
 
 ### Imagery
 
@@ -123,11 +122,11 @@ Favicon.
 
 Wireframes for different screen sizes created using Balsamiq.
 
-![Start Screen Wireframes](/assets/documentation/wireframes/startScreen.png)
+![Start Screen Wireframes](/assets/docs/wireframes/startScreen.png)
 
-![Quiz Screen Wireframes](/assets/documentation/wireframesquizScreen.png)
+![Quiz Screen Wireframes](/assets/docs/wireframesquizScreen.png)
 
-![Error Screen Wireframes](/assets/documentation/wireframes/errorPage.png)
+![Error Screen Wireframes](/assets/docs/wireframes/errorPage.png)
 
 - - -
 
@@ -165,7 +164,6 @@ HTML, CSS, Javascript.
 
 - [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [EmailJS](https://www.emailjs.com/)
-- [JQuery](https://jquery.com/)
 
 ### Libraries & Packages Used
 
@@ -237,6 +235,12 @@ Please see [TESTING.md](TESTING.md) for all testing performed
 ## Credits
 
 ### Code Used
+
+Logic inspired by:
+[Quiz Tutorial](https://simplestepscode.com/javascript-quiz-tutorial/)
+[Alternate Quiz Tutoral](https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/)
+
+[Test tutorial followed before creating own logic](https://www.youtube.com/watch?v=p-2G-7vLuV4)
 
 ### Content
 
