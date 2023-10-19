@@ -98,7 +98,7 @@ Wave Final Results
 |                                   |                                    |
 | `Returning Visitors`                                               |
 |                                          |                                    |      |
-| Se           |                                    |      |
+|            |                                    |      |
 | `Admin User`                                                       |
 |          | |      |
 |  |                                    |      |
@@ -135,9 +135,9 @@ Each device tested the site using the following browsers:
 
 | Feature                           | Testing                                                                              | Image                                                                                                                                |
 | --------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Testing link to the DOM to attempt to bring up first question in array | Use of "console.log" to pull data. Initially failed as there was an error in the link. Functional once fixed. | <img src="/assets/documentation/testing/missingLink.png" alt="screenshot" width="50px">               |
-|                              |        |
-|     |   |  |
+| Testing link to the DOM to attempt to bring up first question in array | Use of "console.log" to pull data. Initially failed as there was an error in the link from HTML page. Functional once fixed. | <img src="/assets/documentation/testing/missingLink.png" alt="screenshot" width="50px"> |
+| Successful link to DOM    | Loading the first question of in the array | <img src="/assets/documentation/testing/connectingToDom.png" alt="screenshot" width="50px"> |
+| Adding the first answer options from the array | linking the ID and labels to bring up the answer options  | <img src="/assets/documentation/testing/connectingOptionsToDom.png" alt="screenshot" width="50px"> |
 |        |            ||
 
 ---
@@ -146,8 +146,13 @@ Each device tested the site using the following browsers:
 
 ### Solved Bugs
 
-| No. | Bug | How I solved the issue | Image |
-| --- | --- | ---------------------- | ----- |
+| Bug | How I solved the issue | Image |
+| --- | ---------------------- | ----- |
+| getting undefined insead of array index vaule | needed to convert the index value to the key. Was targeting wrong variable. Help from tutors to rectify. | <img src="/assets/documentation/testing/bug-linkIndexToOption.png" alt="screenshot" width="50px"> |
+| Next question not loading | If statement was using strict equality instead of equality and not returning results | <img src="/assets/documentation/testing/bug-chaneEqulityOperator.png" alt="screenshot" width="50px"> |
+| Not all options allowing the next question to load | Missing inequality value to prevent no options or allowing the wrong option to be chosen | <img src="/assets/documentation/testing/bug-undefined.png" alt="screenshot" width="50px"> |
+|        |            ||
+|        |            ||
 
 ---
 
