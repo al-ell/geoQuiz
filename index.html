@@ -39,39 +39,30 @@
           <button id="start-btn">Start</button>
         </div> -->
       <div id="quiz-container">
-        <div class="header">
-          <div class="question-count">
-            <span id="question-number">Question 1 of 10</span>
-          </div>
-        </div>
-        <h2 id="question">Quesiton</h2>
-        <div id="options-container">
+        <div>
+          <h2 id="question">Quesiton</h2>
           <!-- answer options displayed here-->
           <ul>
             <li>
-              <input type="radio" name="options" class="options" />
-              <label for="a" id="a">A: </label>
+              <input type="radio" name="options" id="a" class="options" />
+              <label for="a" id="a-option">A: </label>
             </li>
             <li>
-              <input type="radio" name="options" class="options" />
-              <label for="b" id="b">B: </label>
+              <input type="radio" name="options" id="b" class="options" />
+              <label for="b" id="b-option">B: </label>
             </li>
             <li>
-              <input type="radio" name="options" class="options" />
-              <label for="c" id="c">C: </label>
+              <input type="radio" name="options" id="c" class="options" />
+              <label for="c" id="c-option">C: </label>
             </li>
             <li>
-              <input type="radio" name="options" class="options" />
-              <label for="d" id="d">D: </label>
+              <input type="radio" name="options" id="d" class="options" />
+              <label for="d" id="d-option">D: </label>
             </li>
           </ul>
         </div>
         <button id="submit-btn">Submit</button>
       </div>
-      <!-- <div class="end-container hide">
-            <div>Your final score is: <span id="end-score">0</span></div>
-            <button id="restart">Restart</button>
-        </div> -->
     </main>
     <footer></footer>
     <script src="assets/javascript/main.js"></script>

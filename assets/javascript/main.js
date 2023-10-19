@@ -1,8 +1,6 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     generateQuiz();
 });
-
 
 const easyQuizArray = [
     {
@@ -11,7 +9,7 @@ const easyQuizArray = [
         b: "Madrid",
         c: "Warsaw",
         d: "Berlin",
-        correct: "a",
+        answer: "a",
     },
     {
         question: "Which of these rivers is the longest?",
@@ -19,7 +17,7 @@ const easyQuizArray = [
         b: "Congo",
         c: "Yangtze",
         d: "Yellow",
-        answer: "a"
+        answer: "a",
     },
     {
         question: "Athens is the capital of which country?",
@@ -27,15 +25,16 @@ const easyQuizArray = [
         b: "Egypt",
         c: "Greece",
         d: "Kenya",
-        answer: "c"
+        answer: "c",
     },
     {
-        question: "What is the name of the country that borders the United States to the north?",
+        question:
+            "What is the name of the country that borders the United States to the north?",
         a: "Columbia",
         b: "Russia",
         c: "Canada",
         d: "Mexico",
-        answer: "c"
+        answer: "c",
     },
     {
         question: "What three colors do you find on the Italian flag?",
@@ -43,7 +42,7 @@ const easyQuizArray = [
         b: "Red, White, Yellow",
         c: "Red, White, Blue",
         d: "Red, White, Black",
-        answer: "a"
+        answer: "a",
     },
     {
         question: "Where is the driest place on earth?",
@@ -51,7 +50,7 @@ const easyQuizArray = [
         b: "Red, White, Yellow",
         c: "Red, White, Blue",
         d: "Red, White, Black",
-        answer: "a"
+        answer: "a",
     },
     {
         question: "What is the largest continent",
@@ -59,7 +58,7 @@ const easyQuizArray = [
         b: "Asia",
         c: "Europe",
         d: "Africa",
-        answer: "b"
+        answer: "b",
     },
     {
         question: "The famous 'Leaning Tower of Pisa' is found in what country?",
@@ -67,7 +66,7 @@ const easyQuizArray = [
         b: "Germany ",
         c: "Italy",
         d: "France",
-        answer: "c"
+        answer: "c",
     },
     {
         question: "Which of the Earth's oceans is the smallest in size?",
@@ -75,51 +74,90 @@ const easyQuizArray = [
         b: "Indian",
         c: "Pacific",
         d: "Arctic",
-        answer: "d"
+        answer: "d",
     },
     {
-        question: "The nation state of Slovenia is located on which continent?",
+        question: "The nation country of Slovenia is located on which continent?",
         a: "Europe",
         b: "Asia",
         c: "Africa",
         d: "South America",
+        answer: "a",
     },
 ];
-
 
 // Load all the elements from HTML to DOM:
 const quizContainer = document.getElementById("quiz-container");
 const options = document.querySelectorAll(".options");
 const quizQuestion = document.getElementById("question");
-const aText = document.getElementById('a');
-const bText = document.getElementById('b');
-const cText = document.getElementById('c');
-const dText = document.getElementById('d');
-const submitBtn = document.getElementById('submit-btn');
-
+const aText = document.getElementById("a");
+const bText = document.getElementById("b");
+const cText = document.getElementById("c");
+const dText = document.getElementById("d");
+const submitBtn = document.getElementById("submit-btn");
 
 // to start questions and score at 0 each time
 let currentQuiz = 0;
 let score = 0;
 
-
 // To generate the quiz
 
-
 function generateQuiz() {
-    // to call the first question in the quiz array 
+    // to call the first question in the quiz array
     const currentQuizData = easyQuizArray[currentQuiz];
-    // to insert the first question
-    console.log(currentQuizData);
+    // to insert the first question and answer options
     quizQuestion.innerText = currentQuizData.question;
-    aText.innerText = currentQuizData.a;
-    bText.innerText = currentQuizData.b;
-    cText.innerText = currentQuizData.c;
-    dText.innerText = currentQuizData.d;
+    aText.innerText = "A: " + currentQuizData.a;
+    bText.innerText = "B: " + currentQuizData.b;
+    cText.innerText = "C: " + currentQuizData.c;
+    dText.innerText = "D: " + currentQuizData.d;
+}
 
+// loop through to uncheck options for the next question
+function deselectOptions() {
+    options.forEach(option => option.checked = false);
 }
 
 
-// function deselectOptions() {
-//     options.forEach(option => answerEl.checked = false);
-// }
+function getSelected() {
+    // declare answer variable, then loop through the array
+    let answer;
+    // loop through using boolean to check if correct answer selected matches answer
+    options.forEach((option, index) => {
+        if (option.checked) {
+            answer = index;
+        }
+    });
+
+    return answer;
+    console.log(answer);
+}
+
+// listen for click event to submit the selected option
+submitBtn.addEventListener("click", () => {
+    const choice = getSelected();
+
+    console.log(options[choice].index);
+
+    if (choice) {
+        if (options[choice].index == easyQuizArray[currentQuiz].answer) {
+
+            score++;
+        }
+        // move onto next question
+        currentQuiz++;
+
+        if (currentQuiz < easyQuizArray.length) {
+            generateQuiz();
+        } else {
+            quizContainer.innerHTML = `
+                <div class="end-container">
+                    <h2>Congratulations!
+                        You answered ${score} / ${easyQuizArray.length} 
+                        questions correctly!
+                    </h2>
+                    <button onclick="location.reload()" id="restart">Restart</button>
+                </div>`;
+        }
+    }
+});
