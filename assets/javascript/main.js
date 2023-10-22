@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    generateQuiz();
+
 });
 
 const easyQuizArray = [
@@ -96,6 +96,19 @@ const cText = document.getElementById("c-option");
 const dText = document.getElementById("d-option");
 const submitBtn = document.getElementById("submit-btn");
 
+const startBtn = document.getElementById("start-btn");
+
+
+// To move from start screen to quiz
+
+
+
+startBtn.addEventListener("click", () => {
+    quizContainer.classList.remove("start-screen");
+    quizContainer.classList.add("quiz-container");
+    generateQuiz();
+});
+
 // to start questions and score at 0 each time
 let currentQuiz = 0;
 let score = 0;
@@ -103,21 +116,65 @@ let score = 0;
 // To generate the quiz
 
 function generateQuiz() {
+
     // to call the first question in the quiz array
     const currentQuizData = easyQuizArray[currentQuiz];
     // to insert the first question and answer options
-    quizQuestion.innerText = currentQuizData.question;
-    aText.innerText = "A: " + currentQuizData.a;
-    bText.innerText = "B: " + currentQuizData.b;
-    cText.innerText = "C: " + currentQuizData.c;
-    dText.innerText = "D: " + currentQuizData.d;
+    quizContainer.innerHTML = `<div>
+          <h2 id="question">${currentQuizData.question}</h2>
+          <!-- answer options displayed here-->
+          <ul>
+            <li>
+              <input type="radio" name="options" id="a" class="options" />
+              <label for="a" class="option-text" id="a-option">A: ${currentQuizData.a}</label>
+            </li>
+            <li>
+              <input type="radio" name="options" id="b" class="options" />
+              <label for="b" class="option-text" id="b-option">B: ${currentQuizData.b}</label>
+            </li>
+            <li>
+              <input type="radio" name="options" id="c" class="options" />
+              <label for="c" class="option-text" id="c-option">C: ${currentQuizData.c}</label>
+            </li>
+            <li>
+              <input type="radio" name="options" id="d" class="options" />
+              <label for="d" class="option-text" id="d-option">D: ${currentQuizData.d}</label>
+            </li>
+          </ul>
+        </div>
+        <div class="btn-container">
+          <button id="submit-btn">Submit</button>
+        </div>`;
+
+    const submitBtn = document.getElementById("submit-btn");
+    submitBtn.addEventListener("click", () => {
+        const choice = getSelected();
+
+        if (choice !== undefined) {
+            if (options[choice].id == easyQuizArray[currentQuiz].answer) {
+                score++;
+            }
+        }
+
+        // Move onto the next question
+        currentQuiz++;
+
+        if (currentQuiz < easyQuizArray.length) {
+            deselectOptions(); // Clear the selected option for the next question
+            generateQuiz();
+        } else {
+            quizContainer.innerHTML = `<h2>Congratulations! You answered ${score} / ${easyQuizArray.length} questions correctly!</h2>
+            <button onclick="location.reload()" id="restart">Restart</button>`;
+            quizContainer.classList.remove("quiz-container");
+            quizContainer.classList.add("end-container");
+        }
+    });
 }
 
 // loop through to uncheck options for the next question
 function deselectOptions() {
     options.forEach(option => option.checked = false);
 }
-
 
 function getSelected() {
     // declare answer variable, then loop through the array
@@ -128,31 +185,8 @@ function getSelected() {
             answer = index;
         }
     });
-
     return answer;
-    console.log(answer);
 }
 
 // listen for click event to submit the selected option
-submitBtn.addEventListener("click", () => {
-    const choice = getSelected();
 
-    if (choice !== undefined) {
-        if (options[choice].id == easyQuizArray[currentQuiz].answer) {
-            score++;
-        }
-    }
-
-    // Move onto the next question
-    currentQuiz++;
-
-    if (currentQuiz < easyQuizArray.length) {
-        deselectOptions(); // Clear the selected option for the next question
-        generateQuiz();
-    } else {
-        quizContainer.innerHTML = `<h2>Congratulations! You answered ${score} / ${easyQuizArray.length} questions correctly!</h2>
-            <button onclick="location.reload()" id="restart">Restart</button>`;
-        quizContainer.classList.remove("quiz-container");
-        quizContainer.classList.add("end-container");
-    }
-});
