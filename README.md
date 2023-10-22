@@ -73,9 +73,9 @@ As a first time user of the site I want to:
 As a Returning visitor I want to:
 
 - All first time user goals  
-- Choose a quiz depending on geographical themes
-- Answer different questions, or in a different order
-- See what's new since lastvisiting
+- Choose a quiz depending on difficulty themes
+- Answer different questions, or in a random order
+- See what's new since last visiting
 
 #### __Admin User__
 
@@ -131,10 +131,11 @@ Wireframes for different screen sizes created using Balsamiq.
 
 ## Features
 
-The website is comprised of 2 pages:
+The website is comprised of 3 pages:
 
 - Index page
 - Contact form page
+- 404 page
   
 ### Elements found on each page
 
@@ -150,6 +151,7 @@ Possible future updates can include:
 - Create an account to save their score
 - Ability to share score
 - A variety of quizes at different levels
+- Randomised questions & more than 10 questions in each quiz
 
 ### Accessibility
 
@@ -192,7 +194,7 @@ HTML, CSS, Javascript.
 
 The project was developed using Codeanywhere cloud IDE and pushed to GitHub using the inbuilt command line. To deploy to GitHub Pages from the [Github repository](...) follow these steps:
 
-1. Log in to [GitHub]....)
+1. Log in to [GitHub](....)
 2. Go to the [repository page](...)
 3. Change the name of the respository to "username.github.io" : al-ell.github.io
 4. From the menu above the repository menu select __settings__
