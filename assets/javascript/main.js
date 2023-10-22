@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-});
-
 const easyQuizArray = [
     {
         question: "What is the capital of Russia?",
@@ -61,7 +57,8 @@ const easyQuizArray = [
         answer: "b"
     },
     {
-        question: "The famous 'Leaning Tower of Pisa' is found in what country?",
+        question:
+            "The famous 'Leaning Tower of Pisa' is found in what country?",
         a: "Spain",
         b: "Germany ",
         c: "Italy",
@@ -77,13 +74,14 @@ const easyQuizArray = [
         answer: "d"
     },
     {
-        question: "The nation country of Slovenia is located on which continent?",
+        question:
+            "The nation country of Slovenia is located on which continent?",
         a: "Europe",
         b: "Asia",
         c: "Africa",
         d: "South America",
         answer: "a"
-    },
+    }
 ];
 
 // Load all the elements from HTML to DOM:
@@ -94,15 +92,10 @@ const aText = document.getElementById("a-option");
 const bText = document.getElementById("b-option");
 const cText = document.getElementById("c-option");
 const dText = document.getElementById("d-option");
-const submitBtn = document.getElementById("submit-btn");
-
 const startBtn = document.getElementById("start-btn");
 
 
 // To move from start screen to quiz
-
-
-
 startBtn.addEventListener("click", () => {
     quizContainer.classList.remove("start-screen");
     quizContainer.classList.add("quiz-container");
@@ -125,28 +118,37 @@ function generateQuiz() {
           <!-- answer options displayed here-->
           <ul>
             <li>
-              <input type="radio" name="options" id="a" class="options" />
-              <label for="a" class="option-text" id="a-option">A: ${currentQuizData.a}</label>
+                <input type="radio" name="options" id="a" class="options" />
+                <label for="a" class="option-text" id="a-option">
+                    A: ${currentQuizData.a}
+                </label>
             </li>
             <li>
-              <input type="radio" name="options" id="b" class="options" />
-              <label for="b" class="option-text" id="b-option">B: ${currentQuizData.b}</label>
+                <input type="radio" name="options" id="b" class="options" />
+                <label for="b" class="option-text" id="b-option">
+                    B: ${currentQuizData.b}
+                </label>
             </li>
             <li>
-              <input type="radio" name="options" id="c" class="options" />
-              <label for="c" class="option-text" id="c-option">C: ${currentQuizData.c}</label>
+                <input type="radio" name="options" id="c" class="options" />
+                <label for="c" class="option-text" id="c-option">
+                    C: ${currentQuizData.c}
+                </label>
             </li>
             <li>
-              <input type="radio" name="options" id="d" class="options" />
-              <label for="d" class="option-text" id="d-option">D: ${currentQuizData.d}</label>
+                <input type="radio" name="options" id="d" class="options" />
+                <label for="d" class="option-text" id="d-option">
+                    D: ${currentQuizData.d}
+                </label>
             </li>
           </ul>
         </div>
         <div class="btn-container">
           <button id="submit-btn">Submit</button>
         </div>`;
-
+    // moved into function as element not present when event listener retrieved
     const submitBtn = document.getElementById("submit-btn");
+    // listen for click event to submit the selected option
     submitBtn.addEventListener("click", () => {
         const choice = getSelected();
 
@@ -160,10 +162,14 @@ function generateQuiz() {
         currentQuiz++;
 
         if (currentQuiz < easyQuizArray.length) {
-            deselectOptions(); // Clear the selected option for the next question
+            // Clear the selected option before the next question
+            deselectOptions();
             generateQuiz();
         } else {
-            quizContainer.innerHTML = `<h2>Congratulations! You answered ${score} / ${easyQuizArray.length} questions correctly!</h2>
+            quizContainer.innerHTML = `<h2>
+                Congratulations! You answered ${score} /
+                 ${easyQuizArray.length} questions correctly!
+            </h2>
             <button onclick="location.reload()" id="restart">Restart</button>`;
             quizContainer.classList.remove("quiz-container");
             quizContainer.classList.add("end-container");
@@ -173,13 +179,15 @@ function generateQuiz() {
 
 // loop through to uncheck options for the next question
 function deselectOptions() {
-    options.forEach(option => option.checked = false);
+    options.forEach(option => {
+        return option.checked = false;
+    });
 }
 
 function getSelected() {
     // declare answer variable, then loop through the array
     let answer;
-    // loop through using boolean to check if correct answer selected matches answer
+    // loop through using boolean to check if selection matches answer
     options.forEach((option, index) => {
         if (option.checked) {
             answer = index;
@@ -187,6 +195,4 @@ function getSelected() {
     });
     return answer;
 }
-
-// listen for click event to submit the selected option
 

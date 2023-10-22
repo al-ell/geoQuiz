@@ -32,15 +32,20 @@ Visit the deployed site: [GeoQuiz](#)
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website.
 
-- Index Page:
-- Contact Page:
-- Error Page:
+- Index Page: No errors or warnings.
+- Contact Page: No errors or warnings.
+- Error Page: No errors or warnings.
 
 [Jigsaw W3C](https://jigsaw.w3.org/css-validator/) was used to validate the CSS stylesheet.
 
-- css:
+- css: No errors or warnings.
   
-[]
+[JSLint](https://www.jslint.com/) usded to validate Javascript.
+
+/*jslint browser:true */ used to prevent error messages due to lack of browser
+
+- main.js: 26 warnings.
+- contact.js: 5 warnings.
 
 ---
 
@@ -72,11 +77,9 @@ Wave Initial Results
 
 [WAVE](http://wave.webaim.org/) (Web Accessibility Evaluation Tool)
 
-![Initial result](#)
+![Start Sreen](#)
 
-Wave Final Results
-
-![Wave contrast editor 1](#)
+![End Screen](#)
 
 ![Wave contrast editor 2](#)
 
