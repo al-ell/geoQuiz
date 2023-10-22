@@ -150,10 +150,9 @@ submitBtn.addEventListener("click", () => {
         deselectOptions(); // Clear the selected option for the next question
         generateQuiz();
     } else {
-        quizContainer.innerHTML = `
-            <div class="end-container">
-                <h2>Congratulations! You answered ${score} / ${easyQuizArray.length} questions correctly!</h2>
-                <button onclick="location.reload()" id="restart">Restart</button>
-            </div>`;
+        quizContainer.innerHTML = `<h2>Congratulations! You answered ${score} / ${easyQuizArray.length} questions correctly!</h2>
+            <button onclick="location.reload()" id="restart">Restart</button>`;
+        quizContainer.classList.remove("quiz-container");
+        quizContainer.classList.add("end-container");
     }
 });

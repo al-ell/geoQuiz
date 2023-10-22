@@ -33,7 +33,6 @@ Link to deployed site: [lorem](kjljl)
     - [Frameworks Used](#frameworks-used)
     - [Libraries \& Packages Used](#libraries--packages-used)
     - [Programs Used](#programs-used)
-    - [API](#api)
     - [Error Handling](#error-handling)
   - [Deployment \& Local Development](#deployment--local-development)
     - [Deployment](#deployment)
@@ -105,7 +104,7 @@ I have chosen child friendly and easy to read Google Fonts for the logo, heading
 Kalam:
 ![kalam](/assets/docs/styling/kalam.png)
 
-##### Nav 
+##### Nav
 
 ![Itim](/assets/docs/styling/itim.png)
 

@@ -13,7 +13,7 @@ Visit the deployed site: [GeoQuiz](#)
   - [AUTOMATED TESTING](#automated-testing)
     - [W3C Validator](#w3c-validator)
     - [Lighthouse](#lighthouse)
-        - [Opportunities to Improve Performance](#opportunities-to-improve-performance)
+      - [Opportunities to Improve Performance](#opportunities-to-improve-performance)
     - [WAVE Testing](#wave-testing)
   - [MANUAL TESTING](#manual-testing)
     - [Testing User Stories](#testing-user-stories)
@@ -38,7 +38,7 @@ Visit the deployed site: [GeoQuiz](#)
 
 [Jigsaw W3C](https://jigsaw.w3.org/css-validator/) was used to validate the CSS stylesheet.
 
-- css: 
+- css:
   
 []
 

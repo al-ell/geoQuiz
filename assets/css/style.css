@@ -12,7 +12,7 @@ footer {
     background-color: #d0d8dc;
 }
 
-#quiz-container {
+.quiz-container {
     background-color: #FAB061;
 }
 
@@ -99,6 +99,12 @@ main {
     max-width: 600px;
     border-radius: 10px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-container h2 {
+    margin: 30px 0;
 }
 
 .hide {
@@ -116,12 +122,12 @@ main {
     background-color: #f9a03f;
     font-family: Itim, sans-serif;
     letter-spacing: 2px;
-    display: none;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     font-size: 20px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 #submit-btn {
@@ -149,7 +155,7 @@ main {
     padding-top: 30px;
 }
 
-#quiz-container {
+.quiz-container {
     margin-top: 10vh;
     padding: 30px 0 10px 20px;
     width: 80%;
