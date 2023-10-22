@@ -140,7 +140,7 @@ nav a {
     width: 80%;
     border: none;
     border-radius: 10px;
-    color: #F3F5F6;
+    color: #fff;
     background-color: #5d8038;
     font-family: Itim, sans-serif;
     letter-spacing: 2px;
@@ -150,6 +150,8 @@ nav a {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
+#start-btn:hover,
+#restart:hover,
 #submit-btn:hover {
     cursor: pointer;
 }

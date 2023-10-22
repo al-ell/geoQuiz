@@ -42,7 +42,7 @@ Visit the deployed site: [GeoQuiz](#)
   
 [JSLint](https://www.jslint.com/) usded to validate Javascript.
 
-/*jslint browser:true */ used to prevent error messages due to lack of browser
+/*jslint browser:true*/ used to prevent error messages due to lack of browser
 
 - main.js: 26 warnings.
 - contact.js: 5 warnings.
@@ -77,13 +77,11 @@ Wave Initial Results
 
 [WAVE](http://wave.webaim.org/) (Web Accessibility Evaluation Tool)
 
-![Start Sreen](#)
+![Start Sreen](/assets/docs/wave/wave-startScreen.png)
 
-![End Screen](#)
+![Quiz Screen](/assets/docs/wave/wave-quizScreen.png)
 
-![Wave contrast editor 2](#)
-
-![Final result](#)
+![End Screen](/assets/docs/wave/wave-endScreen.png)
 
 ---
 
@@ -119,6 +117,7 @@ Each device tested the site using the following browsers:
 | Feature  | Expected Outcome              | Testing Performed | Result | Pass/Fail |
 | -------- | ----------------------------- | ----------------- | ------ | --------- |
 | `Navbar` | all links tested on all pages |
+|
 
 | `Footer` |
 
@@ -154,6 +153,8 @@ Each device tested the site using the following browsers:
 | getting undefined insead of array index vaule | needed to convert the index value to the key. Was targeting wrong variable. Help from tutors to rectify. | <img src="/assets/documentation/testing/bug-linkIndexToOption.png" alt="screenshot" width="50px"> |
 | Next question not loading | If statement was using strict equality instead of equality and not returning results | <img src="/assets/documentation/testing/bug-chaneEqulityOperator.png" alt="screenshot" width="50px"> |
 | Not all options allowing the next question to load | Missing inequality value to prevent no options or allowing the wrong option to be chosen | <img src="/assets/documentation/testing/bug-undefined.png" alt="screenshot" width="50px"> |
+| Event Listener called before element present | After converting HTML to template literal the submit button wasn't loaded until start button pressed. But the event listener and variable were being loaded before. I moved the event listener into the function and the quiz became functional again | <img src="/assets/documentation/testing/bug-eventListener.png" alt="screenshot" width="50px"> |
+| "generateQuiz" function in wrong location after addition of template literal and start screen | I moved the funciton call into the event listener on the start button.  | <img src="/assets/documentation/testing/bug-templateLiteralAdd.png" alt="screenshot" width="50px"> |
 |        |            ||
 |        |            ||
 
