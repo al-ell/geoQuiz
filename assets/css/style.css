@@ -1,6 +1,5 @@
 /* Colors */
 
-body,
 .quiz-main {
     background-color: #765674;
 }
@@ -12,6 +11,7 @@ footer {
     background-color: #d0d8dc;
 }
 
+.error-main,
 .contact-main,
 .quiz-container {
     background-color: #FAB061;
@@ -24,6 +24,12 @@ footer {
     box-sizing: border-box;
     margin: 0;
     width: 100%;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 /* Nav & Header */
@@ -84,10 +90,6 @@ nav a {
 
 /* Game Area */
 
-main {
-    display: flex;
-    justify-content: center;
-}
 
 .start-screen,
 .end-container {
@@ -99,6 +101,7 @@ main {
     padding: 20px;
     width: 80%;
     max-width: 600px;
+    max-height: 400px;
     border-radius: 10px;
     text-align: center;
     align-items: center;
@@ -163,6 +166,7 @@ main {
     padding: 30px 0 10px 20px;
     width: 80%;
     max-width: 600px;
+    max-height: 400px;
     border-radius: 10px;
     display: flex;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
@@ -216,12 +220,6 @@ ul {
 
 }
 
-.contact-main {
-    margin-bottom: 10vh;
-    height: 100vh;
-
-}
-
 .contact-form {
     text-transform: uppercase;
     font-family: Delius, sans-serif;
@@ -262,6 +260,54 @@ ul {
 .contact-area {
     justify-content: center;
 }
+
+/* 404 Page */
+
+.error {
+    display: flex;
+    font-family: Kalam, sans-serif;
+    font-weight: 700;
+    font-size: 16vh;
+    letter-spacing: 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.error-main {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.four {
+    color: #da1b2b;
+}
+
+.zero {
+    color: #5d8038;
+}
+
+.error-message {
+    display: flex;
+    font-family: Delius, sans-serif;
+    font-size: 35px;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+
+.error-link {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* @Media Queries */
 

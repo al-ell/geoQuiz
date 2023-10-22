@@ -52,7 +52,7 @@ Link to deployed site: [lorem](kjljl)
 
 ### Project Goals
 
-To create a geography trivia quiz game with different levels of difficulty and themes
+To create a geography trivia quiz game with different levels of difficulty.
 
 ### User Stories
 
@@ -93,7 +93,7 @@ As an administrator for the site I want to:
 ![color scheme](/assets/docs/styling/ColorPallete.png)
 careated using [Coolors](https://coolors.co/) color pallete generator.
 
-I have attempted to make the website gender neutral.
+I have attempted to make the website gender neutral. I chose a yellow backing for the majority of the quiz as it is easier to read.
 
 ### Typography
 
@@ -108,7 +108,7 @@ Kalam:
 
 ![Itim](/assets/docs/styling/itim.png)
 
-##### Questions & Options
+##### Questions, Options & Contact Form
 
 Delius:
 ![delius](/assets/docs/styling/delius.png)
