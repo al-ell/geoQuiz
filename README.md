@@ -245,6 +245,8 @@ Logic inspired by:
 
 ### Content
 
+Quiz questions from [Trivia Champ](https://www.triviachamp.com/Geography-Trivia.php)
+
 - - -
 
 ## Media

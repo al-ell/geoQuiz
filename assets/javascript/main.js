@@ -95,7 +95,7 @@ const dText = document.getElementById("d-option");
 const startBtn = document.getElementById("start-btn");
 
 
-// To move from start screen to quiz
+// To move from start screen to quiz questions
 startBtn.addEventListener("click", () => {
     quizContainer.classList.remove("start-screen");
     quizContainer.classList.add("quiz-container");
@@ -106,16 +106,15 @@ startBtn.addEventListener("click", () => {
 let currentQuiz = 0;
 let score = 0;
 
+
 // To generate the quiz
 
 function generateQuiz() {
-
     // to call the first question in the quiz array
     const currentQuizData = easyQuizArray[currentQuiz];
     // to insert the first question and answer options
     quizContainer.innerHTML = `<div>
           <h2 id="question">${currentQuizData.question}</h2>
-          <!-- answer options displayed here-->
           <ul>
             <li>
                 <input type="radio" name="options" id="a" class="options" />
@@ -153,8 +152,9 @@ function generateQuiz() {
         const choice = getSelected();
 
         if (choice !== undefined) {
-            if (options[choice].id == easyQuizArray[currentQuiz].answer) {
+            if (options[choice].id === easyQuizArray[currentQuiz].answer) {
                 score++;
+
             }
         }
 
@@ -173,6 +173,7 @@ function generateQuiz() {
             <button onclick="location.reload()" id="restart">Restart</button>`;
             quizContainer.classList.remove("quiz-container");
             quizContainer.classList.add("end-container");
+            console.log(score);
         }
     });
 }
