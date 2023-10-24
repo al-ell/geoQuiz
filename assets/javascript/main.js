@@ -84,14 +84,92 @@ const easyQuizArray = [
     }
 ];
 
+const hardQuizArray = [
+    {
+        question: "Which nation used to be called Ceylon from 1948 to 1972?",
+        a: "Iraq",
+        b: "Bahrain",
+        c: "Sri Lanka",
+        d: "South Africa",
+        answer: "c"
+    },
+    {
+        question: "The Orient Express ran between Paris and which city?",
+        a: "Beijing",
+        b: "Istanbul",
+        c: "Shanghais",
+        d: "Moscow",
+        answer: "b"
+    },
+    {
+        question: "In which decade did anyone next set foot on the South Pole after 1912?",
+        a: "1940s",
+        b: "1950s",
+        c: "1920s",
+        d: "1930s",
+        answer: "b"
+    },
+    {
+        question: "Where is the Simpson Desert?",
+        a: "Australia",
+        b: "Iran",
+        c: "Peru",
+        d: "Kenya",
+        answer: "a"
+    },
+    {
+        question: "What was the Vietnam city Saigon renamed to in 1975?",
+        a: "Seoul",
+        b: "Beijing",
+        c: "Hanoi",
+        d: "Ho Chi Minh",
+        answer: "d"
+    },
+    {
+        question: "Where does Antarctica rank in size of the continents?",
+        a: "Third",
+        b: "Sixth",
+        c: "Fifth",
+        d: "Fourth",
+        answer: "c"
+    },
+    {
+        question: "Which South American country's anthem is Republic or Death?",
+        a: "Paraguay",
+        b: "Uruguay",
+        c: "Guyana",
+        d: "Brazil",
+        answer: "a"
+    },
+    {
+        question: "What is the only European country that still has territory on the SouthAmerican continent?",
+        a: "Portugal",
+        b: "Great Britain",
+        c: "The Netherlands",
+        d: "France",
+        answer: "d"
+    },
+    {
+        question: "What is the name of the tiny country located between India and China?",
+        a: "Yemen",
+        b: "Bahrain",
+        c: "Bhutan",
+        d: "Laos",
+        answer: "a"
+    },
+    {
+        question: "Which sea is located off the northern cost of Russia?",
+        a: "The Timor Sea",
+        b: "The Andaman Sea",
+        c: "The Kara Sea",
+        d: "The Philippine Sea",
+        answer: "c"
+    }
+];
+
+
 // Load all the elements from HTML to DOM:
 const quizContainer = document.getElementById("quiz-container");
-const options = document.querySelectorAll(".options");
-const quizQuestion = document.getElementById("question");
-const aText = document.getElementById("a-option");
-const bText = document.getElementById("b-option");
-const cText = document.getElementById("c-option");
-const dText = document.getElementById("d-option");
 const startBtn = document.getElementById("start-btn");
 
 
@@ -102,42 +180,47 @@ startBtn.addEventListener("click", () => {
     generateQuiz();
 });
 
+
+
 // to start questions and score at 0 each time
 let currentQuiz = 0;
 let score = 0;
+const options = document.querySelectorAll(".options");
+
 
 
 // To generate the quiz
 
 function generateQuiz() {
+
     // to call the first question in the quiz array
     const currentQuizData = easyQuizArray[currentQuiz];
     // to insert the first question and answer options
     quizContainer.innerHTML = `<div>
-          <h2 id="question">${currentQuizData.question}</h2>
-          <ul>
+        <h2 id="question">${currentQuizData.question}</h2>
+        <ul>
             <li>
                 <input type="radio" name="options" id="a" class="options" />
                 <label for="a" class="option-text" id="a-option">
-                    A: ${currentQuizData.a}
+
                 </label>
             </li>
             <li>
                 <input type="radio" name="options" id="b" class="options" />
                 <label for="b" class="option-text" id="b-option">
-                    B: ${currentQuizData.b}
+
                 </label>
             </li>
             <li>
                 <input type="radio" name="options" id="c" class="options" />
                 <label for="c" class="option-text" id="c-option">
-                    C: ${currentQuizData.c}
+ 
                 </label>
             </li>
             <li>
                 <input type="radio" name="options" id="d" class="options" />
                 <label for="d" class="option-text" id="d-option">
-                    D: ${currentQuizData.d}
+
                 </label>
             </li>
           </ul>
@@ -145,14 +228,27 @@ function generateQuiz() {
         <div class="btn-container">
           <button id="submit-btn">Submit</button>
         </div>`;
+
+
+    const quizQuestion = document.getElementById("question");
+    const aText = document.getElementById("a-option");
+    const bText = document.getElementById("b-option");
+    const cText = document.getElementById("c-option");
+    const dText = document.getElementById("d-option");
+    quizQuestion.innerText = currentQuizData.question;
+    aText.innerText = "A: " + currentQuizData.a;
+    bText.innerText = "B: " + currentQuizData.b;
+    cText.innerText = "C: " + currentQuizData.c;
+    dText.innerText = "D: " + currentQuizData.d;
+    console.log(aText);
     // moved into function as element not present when event listener retrieved
     const submitBtn = document.getElementById("submit-btn");
     // listen for click event to submit the selected option
     submitBtn.addEventListener("click", () => {
         const choice = getSelected();
-
+        console.log(aText);
         if (choice !== undefined) {
-            if (options[choice].id === easyQuizArray[currentQuiz].answer) {
+            if (options[choice].id == easyQuizArray[currentQuiz].answer) {
                 score++;
 
             }
@@ -177,6 +273,7 @@ function generateQuiz() {
         }
     });
 }
+
 
 // loop through to uncheck options for the next question
 function deselectOptions() {
