@@ -36,18 +36,19 @@ main {
 
 .nav-container {
     width: 100%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
-    text-align: center;
-    display: inline-flex;
     padding: 10px;
     color: #765674;
 }
@@ -57,7 +58,6 @@ nav a {
     font-family: itim, sans-serif;
     font-size: 26px;
     letter-spacing: 2px;
-    text-align: center;
 }
 
 .logo-container {
@@ -97,6 +97,8 @@ nav a {
     flex-direction: column;
     background-color: #5d8038;
     font-family: Delius, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
     margin-top: 10vh;
     padding: 20px;
     width: 80%;
@@ -106,6 +108,7 @@ nav a {
     text-align: center;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .start-screen h2,
@@ -313,12 +316,17 @@ ul {
 
 /* @Media Queries */
 
-@media screen and (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: space-between;
+
+@media screen and (max-width: 768px) {
+    #quiz-container {
+        margin-top: 5vh;
+        max-height: 500px;
     }
 
+}
+
+
+@media screen and (min-width: 768px) {
     nav li {
         flex: 1 1 0;
     }

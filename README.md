@@ -1,10 +1,10 @@
-# Milestone 2
+# GeoQuiz
 
 ![lorem](lkjljl)
 
 ![lorem](kjjklj)
 
-Link to deployed site: [lorem](kjljl)
+Link to deployed site: [lorem](https://al-ell.github.io/geoQuiz/)
 
 ![GitHub last commit]()
 
