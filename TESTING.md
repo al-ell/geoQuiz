@@ -1,8 +1,8 @@
 # GeoQuiz - Testing
 
-![markup examples](#)
+![Markup Examples](/assets/docs/testing/amIResponsive.png)
 
-Visit the deployed site: [GeoQuiz](#)
+Visit the deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
 
 ---
 
@@ -43,7 +43,7 @@ Visit the deployed site: [GeoQuiz](#)
 
 /_jslint browser:true_/ used to prevent error messages due to lack of browser
 
-- main.js: 26 warnings.
+- main.js: 30 warnings.
 - contact.js: 5 warnings.
 
 ---

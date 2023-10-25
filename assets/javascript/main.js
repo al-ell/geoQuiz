@@ -83,8 +83,6 @@ const easyQuizArray = [
     }
 ];
 
-
-
 // Load all the elements present on initial page load from HTML to DOM:
 const quizContainer = document.getElementById("quiz-container");
 const startBtn = document.getElementById("start-btn");
@@ -94,14 +92,14 @@ let currentQuiz = 0;
 let score = 0;
 
 
-// To move from start screen to quiz questions on mouse click 
+// To move from start screen to quiz questions on mouse click
 startBtn.addEventListener("click", () => {
     quizContainer.classList.remove("start-screen");
     quizContainer.classList.add("quiz-container");
     generateQuiz();
 });
 
-// To generate the quiz
+// To generate the quiz questions
 function generateQuiz() {
 
     // to call the first question in the quiz array
@@ -132,12 +130,13 @@ function generateQuiz() {
           <button id="submit-btn">Submit</button>
         </div>`;
 
-    // moved into function as element not present when event listener retrieved)
+    // Load elements created in template literal:
     const quizQuestion = document.getElementById("question");
     const aText = document.getElementById("a-option");
     const bText = document.getElementById("b-option");
     const cText = document.getElementById("c-option");
     const dText = document.getElementById("d-option");
+    // Add the question and options from the array
     quizQuestion.innerText = currentQuizData.question;
     aText.innerText = "A: " + currentQuizData.a;
     bText.innerText = "B: " + currentQuizData.b;
@@ -153,6 +152,7 @@ function generateQuiz() {
             if (options[choice].id == easyQuizArray[currentQuiz].answer) {
                 score++;
             }
+            // to only load the next question if an option has been selected for the previous question
             currentQuiz++;
             if (currentQuiz < easyQuizArray.length) {
                 // Clear the selected option before the next question is loaded
@@ -168,6 +168,7 @@ function generateQuiz() {
                 console.log(score);
             }
         } else {
+            // to alert the player that they need to select an option
             alert("Please select an answer!");
         };
     });
@@ -179,7 +180,7 @@ function generateQuiz() {
 function deselectOptions() {
     const options = document.querySelectorAll(".options");
     options.forEach(option => {
-        return option.checked = false;
+        return option.checked == false;
     });
 }
 

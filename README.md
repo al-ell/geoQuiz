@@ -32,7 +32,6 @@ Link to deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
     - [Languages Used](#languages-used)
     - [Frameworks Used](#frameworks-used)
     - [Libraries \& Packages Used](#libraries--packages-used)
-    - [Programs Used](#programs-used)
     - [Error Handling](#error-handling)
   - [Deployment \& Local Development](#deployment--local-development)
     - [Deployment](#deployment)
@@ -43,8 +42,6 @@ Link to deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
-    - [Media](#media)
-    - [Acknowledgments](#acknowledgments)
 
 ---
 
