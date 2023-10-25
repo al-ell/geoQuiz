@@ -13,6 +13,7 @@ Visit the deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
   - [AUTOMATED TESTING](#automated-testing)
     - [W3C Validator](#w3c-validator)
     - [Lighthouse](#lighthouse)
+          - [Index Page Desktop](#index-page-desktop)
     - [WAVE Testing](#wave-testing)
   - [MANUAL TESTING](#manual-testing)
     - [Testing User Stories](#testing-user-stories)
@@ -50,21 +51,13 @@ Visit the deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
 
 ### Lighthouse
 
-    __Index Page Desktop__
+###### Index Page Desktop
 
-- ![Index Page Desktop](#)
+- ![Index Page](/assets/docs/testing/lighthouseIndex.png#
 
-  **Index Page Mobile**
+- ![Contact Page](/assets/docs/testing/lighthouseContact.png)
 
-- ![Index Page Mobile](#)
-
-  **Contact Page Desktop**
-
-- ![Contact Page Desktop](#)
-
-  **Contact Page Mobile**
-
-- ![Contact Page Mobile](#)
+- ![Error Page](/assets/docs/testing/lighthouseError.png)
 
 ---
 
@@ -107,7 +100,8 @@ Wave Initial Results
 
 ### Full Testing
 
-Full testing was performed using [amiresponsive](#):
+Full testing was performed using [amiresponsive](https://ui.dev/amiresponsive):
+![amiresponsive result](/assets/docs/testing/amIResponsive.png)
 
 Each device tested the site using the following browsers:
 
@@ -122,6 +116,11 @@ Huawei P30 Pro:
 | `Navbar`                                                     | all links tested on all pages                                                      |
 | Click on contact page nav link                               | gallery page loads                                                                 | clicking on link        | taken to page                           | pass      |
 | Click on index page nav link                                 | index page loads                                                                   | clicking on link        | taken to page                           | pass      |
+| `Footer`             |
+| Click on twitter icon | twitter loads in new tab | clicking on link | twitter opens in new tab | pass |
+| Click on youtube icon |youtube loads in new tab | clicking on link | youtube opens in new tab | pass |
+| Click on facebook icon | facebook loads in new tab | clicking on link | facebook opens in new tab | pass |
+| Click on instagram |instagram loads in new tab | clicking on link | instagram opens in new tab | pass |
 | `Home Page`                                                  |
 | Logo text sits at an appropriate height for all screen sizes | use of amiresponsive & Google dev tools to test different device and screeen sizes |
 | Start button loads quiz                                      | quiz loads                                                                         | clicking on button      | quiz loads                              | pass      |
@@ -131,15 +130,13 @@ Huawei P30 Pro:
 | `Error Page`                                                 |
 | Homepage link in text returns to homepage                    | clicking on link                                                                   | return to index         | pass                                    |
 | `Contact Page`                                               |
-| Click on contact button                                      | modal loads over webpage                                                           | clicking on button      | modal loads over webpage                | pass      |
-| Click on close button                                        | modal closes                                                                       | clicking on button      | modal closes                            | pass      |
-| typing in input boxes                                        | words appear on screen                                                             | typing in button        | words appear on screen                  | pass      |
+| Click on send button  | form submits to my email | clicking on button      | email recieved to my inbox | pass      |
+| Click to type into text boxes   |  words appear on screen   | typing    | words appear on screen  | pass      |
+| attempt to send form without filling in all required fields  | Required notifiation pops up  | bpressing send with empty fields      | form won't send   | pass      |
 | typing in text box                                           | words appear on screen                                                             | typing in button        | words appear on screen                  | pass      |
-| attempting to send empty form                                |                                                                                    | clicking on send button | nothing happens                         | fail      |
+| attempting to send empty form                                |  nothing happens | clicking on send button | nothing happens                         | pass     |
 | `Accessability`                                              |
 | title or alt text for all non-text media                     | text appears/screenreader will read out                                            | hovering over media     | text appears/screenreader will read out | pass      |
-
-![amiresponsive result](#)
 
 ---
 
