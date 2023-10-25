@@ -1,16 +1,16 @@
 # GeoQuiz
 
-![lorem](lkjljl)
+![GeoQuiz](/assets/docs/styling/mockUp.png)
 
-![lorem](kjjklj)
+GeoQuiz was created as my second milestone project for the Code Institutes Level 5 Diploma in Web Application Development.
 
-Link to deployed site: [lorem](https://al-ell.github.io/geoQuiz/)
+Link to deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
 
-![GitHub last commit]()
+![GitHub last commit](https://github.com/al-ell/geoQuiz/commits/main)
 
 ## CONTENTS
 
-- [CINIkids](kjljk)
+- [GeoQuiz](https://al-ell.github.io/geoQuiz/)
   - [CONTENTS](#contents)
   - [User Experience](#user-experience)
     - [Project Goals](#project-goals)
@@ -52,20 +52,19 @@ Link to deployed site: [lorem](https://al-ell.github.io/geoQuiz/)
 
 ### Project Goals
 
-To create a geography trivia quiz game with different levels of difficulty.
+To create a geography trivia quiz game which gives the user an end score.
 
 ### User Stories
 
 #### **Target Audience**
 
-The target audience includes children and adults
+The target audience includes children and adults who want to test their geography knowledge.
 
 #### **First Time Visitor Goals**
 
 As a first time user of the site I want to:
 
-- Complete gepgraphy quizzes
-- Choose a different quiz based on difficulty
+- Complete a gepgraphy quiz
 - See my score at the end of the quiz
 
 #### **Returning Visitor Goals**
@@ -73,8 +72,7 @@ As a first time user of the site I want to:
 As a Returning visitor I want to:
 
 - All first time user goals
-- Choose a quiz depending on difficulty themes
-- Answer different questions, or in a random order
+- See if I can beat my previous score
 - See what's new since last visiting
 
 #### **Admin User**
@@ -139,10 +137,20 @@ The website is comprised of 3 pages:
 
 ### Elements found on each page
 
-- Navbar/Burger icon
-- Search bar
-- Genre buttons
+- Navbar
 - Footer
+
+##### Index Page
+
+![Start Screen]()
+
+![Quiz Screen]()
+
+![End Screen]()
+
+##### Contact Page
+
+![Contact Form]()
 
 ### Future Implementations
 
@@ -154,6 +162,14 @@ Possible future updates can include:
 - Randomised questions & more than 10 questions in each quiz
 
 ### Accessibility
+
+I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been achieved by:
+
+Using semantic HTML.
+Using labels for inputs.
+Providing information for screen readers where there are icons used and no text.
+Adding "current" to navigation for screen reader to inform of page being accessed.
+Ensuring that there is a sufficient colour contrast throughout the site.
 
 ## Technologies Used
 
@@ -182,9 +198,9 @@ HTML, CSS, Javascript.
 
 [Am I Responsive?](http://ami.responsivedesign.is/) To show the website on a range of devices.
 
-### Programs Used
-
 ### Error Handling
+
+I have created a 404 page to direct the user back to the home page if a broken link is selected.
 
 ---
 
@@ -243,10 +259,3 @@ Logic inspired by:
 Quiz questions from [Trivia Champ](https://www.triviachamp.com/Geography-Trivia.php)
 
 ---
-
-## Media
-
-[]()
-[](#)
-
-### Acknowledgments
