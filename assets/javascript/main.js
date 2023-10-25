@@ -168,29 +168,23 @@ const hardQuizArray = [
 ];
 
 
-// Load all the elements from HTML to DOM:
+// Load all the elements present on initial page load from HTML to DOM:
 const quizContainer = document.getElementById("quiz-container");
 const startBtn = document.getElementById("start-btn");
 
+// to start questions and score at 0 each time
+let currentQuiz = 0;
+let score = 0;
 
-// To move from start screen to quiz questions
+
+// To move from start screen to quiz questions on mouse click 
 startBtn.addEventListener("click", () => {
     quizContainer.classList.remove("start-screen");
     quizContainer.classList.add("quiz-container");
     generateQuiz();
 });
 
-
-
-// to start questions and score at 0 each time
-let currentQuiz = 0;
-let score = 0;
-const options = document.querySelectorAll(".options");
-
-
-
 // To generate the quiz
-
 function generateQuiz() {
 
     // to call the first question in the quiz array
@@ -229,7 +223,7 @@ function generateQuiz() {
           <button id="submit-btn">Submit</button>
         </div>`;
 
-
+    // moved into function as element not present when event listener retrieved)
     const quizQuestion = document.getElementById("question");
     const aText = document.getElementById("a-option");
     const bText = document.getElementById("b-option");
@@ -240,28 +234,25 @@ function generateQuiz() {
     bText.innerText = "B: " + currentQuizData.b;
     cText.innerText = "C: " + currentQuizData.c;
     dText.innerText = "D: " + currentQuizData.d;
-    console.log(aText);
-    // moved into function as element not present when event listener retrieved
     const submitBtn = document.getElementById("submit-btn");
     // listen for click event to submit the selected option
     submitBtn.addEventListener("click", () => {
+        const options = document.querySelectorAll(".options");
         const choice = getSelected();
-        console.log(aText);
         if (choice !== undefined) {
             if (options[choice].id == easyQuizArray[currentQuiz].answer) {
-                score++;
-
+                ++score;
             }
-        }
+        };
 
-        // Move onto the next question
         currentQuiz++;
 
         if (currentQuiz < easyQuizArray.length) {
-            // Clear the selected option before the next question
+            // Clear the selected option before the next question is loaded
             deselectOptions();
             generateQuiz();
         } else {
+            // When no more questions are left load the final score & reset button
             quizContainer.innerHTML = `<h2>
                 Congratulations! You answered ${score} /
                  ${easyQuizArray.length} questions correctly!
@@ -277,12 +268,14 @@ function generateQuiz() {
 
 // loop through to uncheck options for the next question
 function deselectOptions() {
+    const options = document.querySelectorAll(".options");
     options.forEach(option => {
         return option.checked = false;
     });
 }
 
 function getSelected() {
+    const options = document.querySelectorAll(".options");
     // declare answer variable, then loop through the array
     let answer;
     // loop through using boolean to check if selection matches answer

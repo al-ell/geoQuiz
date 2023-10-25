@@ -15,10 +15,10 @@ Link to deployed site: [lorem](kjljl)
   - [User Experience](#user-experience)
     - [Project Goals](#project-goals)
     - [User Stories](#user-stories)
-      - [__Target Audience__](#target-audience)
-      - [__First Time Visitor Goals__](#first-time-visitor-goals)
-      - [__Returning Visitor Goals__](#returning-visitor-goals)
-      - [__Admin User__](#admin-user)
+      - [**Target Audience**](#target-audience)
+      - [**First Time Visitor Goals**](#first-time-visitor-goals)
+      - [**Returning Visitor Goals**](#returning-visitor-goals)
+      - [**Admin User**](#admin-user)
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
@@ -46,7 +46,7 @@ Link to deployed site: [lorem](kjljl)
     - [Media](#media)
     - [Acknowledgments](#acknowledgments)
 
-- - -
+---
 
 ## User Experience
 
@@ -56,11 +56,11 @@ To create a geography trivia quiz game with different levels of difficulty.
 
 ### User Stories
 
-#### __Target Audience__
+#### **Target Audience**
 
 The target audience includes children and adults
 
-#### __First Time Visitor Goals__
+#### **First Time Visitor Goals**
 
 As a first time user of the site I want to:
 
@@ -68,23 +68,23 @@ As a first time user of the site I want to:
 - Choose a different quiz based on difficulty
 - See my score at the end of the quiz
 
-#### __Returning Visitor Goals__
+#### **Returning Visitor Goals**
 
 As a Returning visitor I want to:
 
-- All first time user goals  
+- All first time user goals
 - Choose a quiz depending on difficulty themes
 - Answer different questions, or in a random order
 - See what's new since last visiting
 
-#### __Admin User__
+#### **Admin User**
 
 As an administrator for the site I want to:
 
 -
 - Be able to update the features with ease
 
-- - -
+---
 
 ## Design
 
@@ -127,7 +127,7 @@ Wireframes for different screen sizes created using Balsamiq.
 
 ![Error Screen Wireframes](/assets/docs/wireframes/errorPage.png)
 
-- - -
+---
 
 ## Features
 
@@ -136,7 +136,7 @@ The website is comprised of 3 pages:
 - Index page
 - Contact form page
 - 404 page
-  
+
 ### Elements found on each page
 
 - Navbar/Burger icon
@@ -176,7 +176,7 @@ HTML, CSS, Javascript.
 
 [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
 
-[Font Awesome](https://fontawesome.com/)  - For the icons on the website.
+[Font Awesome](https://fontawesome.com/) - For the icons on the website.
 
 [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, solve issues with responsiveness, functionality and styling.
 
@@ -186,7 +186,7 @@ HTML, CSS, Javascript.
 
 ### Error Handling
 
-- - -
+---
 
 ## Deployment & Local Development
 
@@ -197,9 +197,9 @@ The project was developed using Codeanywhere cloud IDE and pushed to GitHub usin
 1. Log in to [GitHub](....)
 2. Go to the [repository page](...)
 3. Change the name of the respository to "username.github.io" : al-ell.github.io
-4. From the menu above the repository menu select __settings__
-5. On the left select __pages__
-6. Under __source__ select __deploy from a branch__
+4. From the menu above the repository menu select **settings**
+5. On the left select **pages**
+6. Under **source** select **deploy from a branch**
 7. Go to "username.github.io" : al-ell.github.io
 
 ### Local Development
@@ -207,31 +207,26 @@ The project was developed using Codeanywhere cloud IDE and pushed to GitHub usin
 #### How to Fork
 
 1. On GitHub.com, navigate to the octocat/Spoon-Knife repository
-2. In the top-right corner of the page, click __Fork__
+2. In the top-right corner of the page, click **Fork**
 3. Under "Owner," select the dropdown menu and click an owner for the forked repository
 4. By default, forks are named the same as their upstream repositories. Optionally, to further distinguish your fork, in the "Repository name" field, type a name
 5. Optionally, in the "Description" field, type a description of your fork
-6. Optionally, select __Copy the DEFAULT branch only__
-7. Click __Create fork__
+6. Optionally, select **Copy the DEFAULT branch only**
+7. Click **Create fork**
 
 #### How to Clone
 
-1. On GitHub.com, navigate to the main page of the repository
-    2. Above the list of files, click __<> Code__
-    3. Copy the URL for the repository
-        *To clone the repository using HTTPS, under "HTTPS", click __clipboard icon__
-        * To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click __clipboard icon__
-        * To clone a repository using GitHub CLI, click GitHub CLI, then click __copy icon__
-    4. Open Terminal, change the current working directory to the location where you want the cloned directory
-    5. Type 'git clone', and then paste the URL copied earlier
-    6. Press __Enter__ to create your local clone
+1. On GitHub.com, navigate to the main page of the repository 2. Above the list of files, click **<> Code** 3. Copy the URL for the repository
+   _To clone the repository using HTTPS, under "HTTPS", click **clipboard icon**
+   _ To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click **clipboard icon** \* To clone a repository using GitHub CLI, click GitHub CLI, then click **copy icon** 4. Open Terminal, change the current working directory to the location where you want the cloned directory 5. Type 'git clone', and then paste the URL copied earlier 6. Press **Enter** to create your local clone
 
-- - -
+---
 
 ## Testing
 
 Please see [TESTING.md](TESTING.md) for all testing performed
-- - -
+
+---
 
 ## Credits
 
@@ -247,7 +242,7 @@ Logic inspired by:
 
 Quiz questions from [Trivia Champ](https://www.triviachamp.com/Geography-Trivia.php)
 
-- - -
+---
 
 ## Media
 

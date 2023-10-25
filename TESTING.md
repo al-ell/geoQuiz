@@ -117,27 +117,28 @@ Huawei P30 Pro:
 - Mozilla Firefox
 - Microsoft Edge
 
-| Feature  | Expected Outcome              | Testing Performed | Result | Pass/Fail |
-| -------- | ----------------------------- | ----------------- | ------ | --------- |
-| `Navbar` | all links tested on all pages |
-| Click on contact page nav link |gallery page loads | clicking on link | taken to page | pass |
-| Click on index page nav link |index page loads | clicking on link | taken to page | pass |
-| `Home Page`          |
+| Feature                                                      | Expected Outcome                                                                   | Testing Performed       | Result                                  | Pass/Fail |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ----------------------- | --------------------------------------- | --------- |
+| `Navbar`                                                     | all links tested on all pages                                                      |
+| Click on contact page nav link                               | gallery page loads                                                                 | clicking on link        | taken to page                           | pass      |
+| Click on index page nav link                                 | index page loads                                                                   | clicking on link        | taken to page                           | pass      |
+| `Home Page`                                                  |
 | Logo text sits at an appropriate height for all screen sizes | use of amiresponsive & Google dev tools to test different device and screeen sizes |
-| Start button loads quiz | quiz loads | clicking on button | quiz loads | pass |
-| Submit button loads next question | net quesiton loads | clicking on button | next question loads | pass |
-| Reload button reloads page | start screen loads | clicking on button | start screen loads | pass |
-| Start button loads quiz | quiz loads | clicking on button | quiz loads | pass |
-| `Error Page`          |
-| Homepage link in text returns to homepage | clicking on link | return to index | pass |
-| `Contact Page` |
-| Click on contact button |modal loads over webpage | clicking on button | modal loads over webpage | pass |
-| Click on close button |modal closes | clicking on button | modal closes | pass |
-| typing in input boxes | words appear on screen | typing in button | words appear on screen| pass |
-| typing in text box | words appear on screen | typing in button | words appear on screen| pass |
-| attempting to send empty form | | clicking on send button | nothing happens | fail |
-| `Accessability` |
-| title or alt text for all non-text media | text appears/screenreader will read out | hovering over media | text appears/screenreader will read out  | pass |
+| Start button loads quiz                                      | quiz loads                                                                         | clicking on button      | quiz loads                              | pass      |
+| Submit button loads next question                            | net quesiton loads                                                                 | clicking on button      | next question loads                     | pass      |
+| Reload button reloads page                                   | start screen loads                                                                 | clicking on button      | start screen loads                      | pass      |
+| Start button loads quiz                                      | quiz loads                                                                         | clicking on button      | quiz loads                              | pass      |
+| `Error Page`                                                 |
+| Homepage link in text returns to homepage                    | clicking on link                                                                   | return to index         | pass                                    |
+| `Contact Page`                                               |
+| Click on contact button                                      | modal loads over webpage                                                           | clicking on button      | modal loads over webpage                | pass      |
+| Click on close button                                        | modal closes                                                                       | clicking on button      | modal closes                            | pass      |
+| typing in input boxes                                        | words appear on screen                                                             | typing in button        | words appear on screen                  | pass      |
+| typing in text box                                           | words appear on screen                                                             | typing in button        | words appear on screen                  | pass      |
+| attempting to send empty form                                |                                                                                    | clicking on send button | nothing happens                         | fail      |
+| `Accessability`                                              |
+| title or alt text for all non-text media                     | text appears/screenreader will read out                                            | hovering over media     | text appears/screenreader will read out | pass      |
+
 ![amiresponsive result](#)
 
 ---
