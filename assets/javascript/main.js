@@ -194,25 +194,25 @@ function generateQuiz() {
         <h2 id="question">${currentQuizData.question}</h2>
         <ul>
             <li>
-                <input type="radio" name="options" id="a" class="options" />
+                <input type="radio" name="options" id="a" class="options" required>
                 <label for="a" class="option-text" id="a-option">
 
                 </label>
             </li>
             <li>
-                <input type="radio" name="options" id="b" class="options" />
+                <input type="radio" name="options" id="b" class="options" required>
                 <label for="b" class="option-text" id="b-option">
 
                 </label>
             </li>
             <li>
-                <input type="radio" name="options" id="c" class="options" />
+                <input type="radio" name="options" id="c" class="options" required>
                 <label for="c" class="option-text" id="c-option">
  
                 </label>
             </li>
             <li>
-                <input type="radio" name="options" id="d" class="options" />
+                <input type="radio" name="options" id="d" class="options" required>
                 <label for="d" class="option-text" id="d-option">
 
                 </label>
@@ -240,12 +240,16 @@ function generateQuiz() {
         const options = document.querySelectorAll(".options");
         const choice = getSelected();
         if (choice !== undefined) {
+            currentQuiz++;
             if (options[choice].id == easyQuizArray[currentQuiz].answer) {
                 ++score;
             }
+        } else {
+            alert("Please select an answer!");
         };
 
-        currentQuiz++;
+
+
 
         if (currentQuiz < easyQuizArray.length) {
             // Clear the selected option before the next question is loaded
@@ -263,6 +267,7 @@ function generateQuiz() {
             console.log(score);
         }
     });
+
 }
 
 
