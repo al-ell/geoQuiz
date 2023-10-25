@@ -49,7 +49,7 @@ const easyQuizArray = [
         answer: "d"
     },
     {
-        question: "What is the largest continent",
+        question: "What is the largest continent?",
         a: "North America",
         b: "Asia",
         c: "Europe",
@@ -74,8 +74,7 @@ const easyQuizArray = [
         answer: "d"
     },
     {
-        question:
-            "The nation country of Slovenia is located on which continent?",
+        question: "The nation country of Slovenia is located on which continent?",
         a: "Europe",
         b: "Asia",
         c: "Africa",
@@ -84,88 +83,6 @@ const easyQuizArray = [
     }
 ];
 
-const hardQuizArray = [
-    {
-        question: "Which nation used to be called Ceylon from 1948 to 1972?",
-        a: "Iraq",
-        b: "Bahrain",
-        c: "Sri Lanka",
-        d: "South Africa",
-        answer: "c"
-    },
-    {
-        question: "The Orient Express ran between Paris and which city?",
-        a: "Beijing",
-        b: "Istanbul",
-        c: "Shanghais",
-        d: "Moscow",
-        answer: "b"
-    },
-    {
-        question: "In which decade did anyone next set foot on the South Pole after 1912?",
-        a: "1940s",
-        b: "1950s",
-        c: "1920s",
-        d: "1930s",
-        answer: "b"
-    },
-    {
-        question: "Where is the Simpson Desert?",
-        a: "Australia",
-        b: "Iran",
-        c: "Peru",
-        d: "Kenya",
-        answer: "a"
-    },
-    {
-        question: "What was the Vietnam city Saigon renamed to in 1975?",
-        a: "Seoul",
-        b: "Beijing",
-        c: "Hanoi",
-        d: "Ho Chi Minh",
-        answer: "d"
-    },
-    {
-        question: "Where does Antarctica rank in size of the continents?",
-        a: "Third",
-        b: "Sixth",
-        c: "Fifth",
-        d: "Fourth",
-        answer: "c"
-    },
-    {
-        question: "Which South American country's anthem is Republic or Death?",
-        a: "Paraguay",
-        b: "Uruguay",
-        c: "Guyana",
-        d: "Brazil",
-        answer: "a"
-    },
-    {
-        question: "What is the only European country that still has territory on the SouthAmerican continent?",
-        a: "Portugal",
-        b: "Great Britain",
-        c: "The Netherlands",
-        d: "France",
-        answer: "d"
-    },
-    {
-        question: "What is the name of the tiny country located between India and China?",
-        a: "Yemen",
-        b: "Bahrain",
-        c: "Bhutan",
-        d: "Laos",
-        answer: "a"
-    },
-    {
-        question: "Which sea is located off the northern cost of Russia?",
-        a: "The Timor Sea",
-        b: "The Andaman Sea",
-        c: "The Kara Sea",
-        d: "The Philippine Sea",
-        answer: "c"
-    }
-];
 
 
 // Load all the elements present on initial page load from HTML to DOM:
@@ -194,28 +111,20 @@ function generateQuiz() {
         <h2 id="question">${currentQuizData.question}</h2>
         <ul>
             <li>
-                <input type="radio" name="options" id="a" class="options" required>
-                <label for="a" class="option-text" id="a-option">
-
-                </label>
+                <input type="radio" name="options" id="a" class="options">
+                <label for="a" class="option-text" id="a-option"></label>
             </li>
             <li>
-                <input type="radio" name="options" id="b" class="options" required>
-                <label for="b" class="option-text" id="b-option">
-
-                </label>
+                <input type="radio" name="options" id="b" class="options">
+                <label for="b" class="option-text" id="b-option"></label>
             </li>
             <li>
-                <input type="radio" name="options" id="c" class="options" required>
-                <label for="c" class="option-text" id="c-option">
- 
-                </label>
+                <input type="radio" name="options" id="c" class="options">
+                <label for="c" class="option-text" id="c-option"></label>
             </li>
             <li>
-                <input type="radio" name="options" id="d" class="options" required>
-                <label for="d" class="option-text" id="d-option">
-
-                </label>
+                <input type="radio" name="options" id="d" class="options">
+                <label for="d" class="option-text" id="d-option"></label>
             </li>
           </ul>
         </div>
@@ -240,32 +149,27 @@ function generateQuiz() {
         const options = document.querySelectorAll(".options");
         const choice = getSelected();
         if (choice !== undefined) {
-            currentQuiz++;
+
             if (options[choice].id == easyQuizArray[currentQuiz].answer) {
-                ++score;
+                score++;
+            }
+            currentQuiz++;
+            if (currentQuiz < easyQuizArray.length) {
+                // Clear the selected option before the next question is loaded
+                deselectOptions();
+                generateQuiz();
+            } else {
+                // When no more questions are left load the final score & reset button
+                quizContainer.innerHTML = `<h2>Congratulations! You answered ${score} /
+                    ${easyQuizArray.length} questions correctly!</h2>
+                    <button onclick="location.reload()" id="restart">Restart</button>`;
+                quizContainer.classList.remove("quiz-container");
+                quizContainer.classList.add("end-container");
+                console.log(score);
             }
         } else {
             alert("Please select an answer!");
         };
-
-
-
-
-        if (currentQuiz < easyQuizArray.length) {
-            // Clear the selected option before the next question is loaded
-            deselectOptions();
-            generateQuiz();
-        } else {
-            // When no more questions are left load the final score & reset button
-            quizContainer.innerHTML = `<h2>
-                Congratulations! You answered ${score} /
-                 ${easyQuizArray.length} questions correctly!
-            </h2>
-            <button onclick="location.reload()" id="restart">Restart</button>`;
-            quizContainer.classList.remove("quiz-container");
-            quizContainer.classList.add("end-container");
-            console.log(score);
-        }
     });
 
 }
