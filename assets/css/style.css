@@ -36,10 +36,8 @@ main {
 
 .nav-container {
     width: 100%;
-    display: flex;
-    display: inline;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 nav ul {
@@ -50,8 +48,14 @@ nav ul {
 
 nav a {
     text-decoration: none;
+    text-align: center;
+    display: block;
     padding: 10px;
     color: #765674;
+}
+
+nav a:hover {
+    color: #FAB061;
 }
 
 .nav-links {
@@ -393,6 +397,11 @@ a {
 
 
 @media screen and (min-width: 768px) {
+
+    nav ul {
+        display: flex;
+    }
+
     nav li {
         flex: 1 1 0;
     }
