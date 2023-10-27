@@ -110,7 +110,11 @@ Delius:
 
 ### Imagery
 
-Favicon.
+Favicon:
+
+Favicon created using [favicon.io](https://favicon.io/favicon-generator/)
+
+![Favicon](/assets/favicon/favicon.ico)
 
 ### Wireframes
 
