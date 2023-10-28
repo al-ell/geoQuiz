@@ -82,19 +82,16 @@ Wave Initial Results
 | Goals                 | How are they achieved? | ---- |
 | --------------------- | ---------------------- | ---- |
 | `First Time Visitors` |                        |
-|                       |                        |      |
-|                       |                        |      |
-|                       |                        |      |
-|                       |                        |      |
-|                       |                        |
+| Understand the purpose of the site | Start screen on homepage |       |
+| Understand how to navigate to other pages | Clear navbar and menu buttons |  |
+| Complete a gepgraphy quiz | By clicking start and submit buttons |      |
+| See my score at the end of the quiz | End screen with score after completion |      |
 | `Returning Visitors`  |
-|                       |                        |      |
-|                       |                        |      |
+| All first time user goals | As above |      |
+| See if I can beat my previous score | By completing the quiz again |      |
+| Contact the quiz maker to request more quizzes | Using the contact form |      |
 | `Admin User`          |
-|                       |                        |      |
-|                       |                        |      |
-|                       |                        |      |
-|                       |                        |      |
+| Be able to update the features with ease |  |      |
 
 ---
 

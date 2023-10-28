@@ -61,6 +61,8 @@ The target audience includes children and adults who want to test their geograph
 
 As a first time user of the site I want to:
 
+- Understand the purpose of the site
+- Understand how to navigate to different pages
 - Complete a gepgraphy quiz
 - See my score at the end of the quiz
 
@@ -70,20 +72,19 @@ As a Returning visitor I want to:
 
 - All first time user goals
 - See if I can beat my previous score
-- See what's new since last visiting
+- Contact the quiz maker to request more quizzes
 
 #### **Admin User**
 
 As an administrator for the site I want to:
 
--
 - Be able to update the features with ease
 
 ---
 
 ## Design
 
-### Colour Scheme 
+### Colour Scheme
 
 ![color scheme](/assets/docs/styling/colorPallete.png)
 careated using [Coolors](https://coolors.co/) color pallete generator.
