@@ -384,9 +384,23 @@ a {
 
 
 @media screen and (max-width: 768px) {
-    #quiz-container {
+    .quiz-container {
         margin-top: 5vh;
-        max-height: 500px;
+        max-height: 50vh;
+        padding: 15px 0 10px 10px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .option-text {
+        padding: 5px;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    #question {
+        padding: 6px;
+        font-size: 26px;
     }
 
 }

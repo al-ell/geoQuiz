@@ -148,10 +148,6 @@ Huawei P30 Pro:
 | Adding the first answer options from the array                         | linking the ID and labels to bring up the answer options                                                                     | <img src="/assets/docs/testing/connectingOptionsToDom.png" alt="screenshot" width="50px"> |
 | Testing score addition                                                 | Playing quiz untl the end so the end game div shows and checking score against tally                                         |                                                                                                    |
 | Testing if the emailJS form works on the contact page                  | Sending an email                                                                                                             | <img src="/assets/docs/testing/test-emailSuccess.png" alt="screenshot" width="50px">      |
-|                                                                        |                                                                                                                              |                                                                                                    |
-|                                                                        |                                                                                                                              |                                                                                                    |
-|                                                                        |                                                                                                                              |                                                                                                    |
-|                                                                        |                                                                                                                              |                                                                                                    |
 
 ---
 
@@ -166,12 +162,9 @@ Huawei P30 Pro:
 | Not all options allowing the next question to load                                            | Missing inequality value to prevent no options or allowing the wrong option to be chosen                                                                                                                                                              | <img src="/assets/docs/fixedBugs/bug-undefined.png" alt="screenshot" width="50px">            |
 | Event Listener called before element present                                                  | After converting HTML to template literal the submit button wasn't loaded until start button pressed. But the event listener and variable were being loaded before. I moved the event listener into the function and the quiz became functional again | <img src="/assets/docs/fixedBugs/bug-eventListener.png" alt="screenshot" width="50px">        |
 | "generateQuiz" function in wrong location after addition of template literal and start screen | I moved the funciton call into the event listener on the start button.                                                                                                                                                                                | <img src="/assets/docs/fixedBugs/bug-templateLiteralAdd.png" alt="screenshot" width="50px">   |
-|                                                                                               |                                                                                                                                                                                                                                                       |                                                                                                      |
-|                                                                                               |                                                                                                                                                                                                                                                       |                                                                                                      |
 
 ---
 
 ### Known Bugs
 
-| No  | Bug | Image |
-| --- | --- | ----- |
+No known bugs.
