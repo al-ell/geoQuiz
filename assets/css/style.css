@@ -318,7 +318,6 @@ ul {
     flex-direction: column;
     padding-bottom: 10px;
     text-align: center;
-
 }
 
 .error-link {
@@ -408,6 +407,18 @@ footer {
         padding: 6px;
         font-size: 26px;
     }
+
+    .error {
+        font-size: 6vh;
+        padding-bottom: 5px;
+    }
+
+    .error-message {
+        display: flex;
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+
 
 }
 
