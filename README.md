@@ -6,7 +6,7 @@ GeoQuiz was created as my second milestone project for the Code Institutes Level
 
 Link to deployed site: [GeoQuiz](https://al-ell.github.io/geoQuiz/)
 
-![GitHub last commit](https://github.com/al-ell/geoQuiz/commits/main)
+[GitHub last commit](https://github.com/al-ell/geoQuiz/commits/main)
 
 ## CONTENTS
 
@@ -83,9 +83,9 @@ As an administrator for the site I want to:
 
 ## Design
 
-### Colour Scheme
+### Colour Scheme 
 
-![color scheme](/assets/docs/styling/ColorPallete.png)
+![color scheme](/assets/docs/styling/colorPallete.png)
 careated using [Coolors](https://coolors.co/) color pallete generator.
 
 I have attempted to make the website gender neutral. I chose a yellow backing for the majority of the quiz as it is easier to read.
@@ -122,7 +122,7 @@ Wireframes for different screen sizes created using Balsamiq.
 
 ![Start Screen Wireframes](/assets/docs/wireframes/startScreen.png)
 
-![Quiz Screen Wireframes](/assets/docs/wireframesquizScreen.png)
+![Quiz Screen Wireframes](/assets/docs/wireframes/quizScreen.png)
 
 ![Error Screen Wireframes](/assets/docs/wireframes/errorPage.png)
 
