@@ -144,15 +144,27 @@ The website is comprised of 3 pages:
 
 ##### Index Page
 
-![Start Screen]()
+![Start Screen](/assets/docs/screenshots/finalIndexDt.png)
 
-![Quiz Screen]()
+![Mobile Start Screen](/assets/docs/screenshots/finalStartMobile.png)
 
-![End Screen]()
+![Quiz Screen](/assets/docs/screenshots/finalQuestion.png)
+
+![Mobile QuiZ Screen](/assets/docs/screenshots/mobileQuestion.png)
+
+![End Screen](/assets/docs/screenshots/finalEndScreen.png)
+
+![Mobile End Screen](/assets/docs/screenshots/mobileEndScreen.png)
 
 ##### Contact Page
 
-![Contact Form]()
+![Contact Form](/assets/docs/screenshots/finalContact.png)
+
+##### Error Page
+
+![Error Screen](/assets/docs/screenshots/finalError.png)
+
+![Mobile Error Screen](/assets/docs/screenshots/finalErrorMobile.png)
 
 ### Future Implementations
 
